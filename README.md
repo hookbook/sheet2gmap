@@ -1,3 +1,3 @@
-# sheets2gmap
+# 碁会所マップ
 
-[Demo site](https://champierre.github.io/sheet2gmap/)
+[Demo site](https://hookbook.github.io/sheet2gmap/)
