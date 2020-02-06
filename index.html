@@ -14,15 +14,16 @@
       }
       #sidebar {
         position: absolute;
-        top: 5%;
-        left: 68%;
+        top: 0%;
+        left: 80%;
         width: 20%;
-        height: 25%;
+        height: 100%;
         border: 1px solid #666;
         padding: 6px;
         background-color: white;
         font-family: Meriyo UI;
         font-size: 14px;
+        overflow: auto;
       }
     </style>
   </head>
@@ -99,12 +100,13 @@
           if (!latitude) { continue; }
           addMarker(i, markerData[i]);
           var name = markerData[i]['名称'];
-
-          elements.push(`<b>${i + 1}</b> <a href="javascript:openWindow(${i})">${name}<\/a><br />`);
+          if (markerData[i]['コメント']) {
+            elements.push(`<b>${i + 1}</b> <a href="javascript:openWindow(${i})">${name}<\/a><br />`);
+          }
         }
         var sidebar_html = null;
-        if (elements.length > 15) {
-          sidebar_html = elements.slice(elements.length - 15).join("\n");
+        if (elements.length > 40) {
+          sidebar_html = elements.slice(elements.length - 40).join("\n");
         } else {
           sidebar_html = elements.join("\n");
         }
