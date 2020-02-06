@@ -100,7 +100,7 @@
           if (!latitude) { continue; }
           addMarker(i, markerData[i]);
           var name = markerData[i]['名称'];
-          if (markerData[i]['コメント'] || markerData['url']) {
+          if (markerData[i]['コメント'] || markerData[i]['url']) {
             elements.push(`<b>${i + 1}</b> <a href="javascript:openWindow(${i})">${name}<\/a><br />`);
           }
         }
